@@ -1,4 +1,7 @@
 #!/bin/bash
 
-date >> /tmp/foo
-echo "worked!" >> /tmp/foo
+INSTALL_DIR=/opt/bitnami/apps/tc
+
+[[ -d $INSTALL_DIR ]] || mkdir $INSTALL_DIR
+cp -R * $INSTALL_DIR
+
