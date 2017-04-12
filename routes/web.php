@@ -38,7 +38,7 @@ $app->post('/accept', function (\Illuminate\Http\Request $request)
                'Reply-To: jguice@compunet.biz' . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
-    mail('jguice@compunet.biz', $subject, $message, $headers);
+    mail('cloudsolutions@compunet.biz', $subject, $message, $headers);
 
     return view('aws-thanks', ['company' => $company]);
 });
