@@ -47,7 +47,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1>AWS Terms &amp; Conditions</h1>
-        <p>By checking the box below and clicking <i>Agree</i>, you are indicating that you have read the terms, conditions, and SLA/MSA documents linked below and agree to abide by all provisions set forth therein.</p>
+        <p>By checking the box below and clicking <i>Agree</i>, you are indicating that you have read the terms, conditions, and SLA / MSA documents linked below and agree to abide by all provisions set forth therein.</p>
 
 
         <form action="/accept" method="post">
@@ -55,7 +55,7 @@
         <input type="hidden" name="platform" value="AWS"/>
         <input type="hidden" name="company" value="<?php echo $company; ?>"/>
 
-        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms, Conditions and SLA/MSA documents
+        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms, Conditions and SLA / MSA documents
         <!--<input type="checkbox"  
 onchange="document.getElementById('grabaperaus').disabled = !this.checked;" name='visto' 
 id='visto'/>-->
