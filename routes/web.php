@@ -11,10 +11,34 @@
 |
 */
 
+// $app->get('/', function () use ($app) {
+//     return $app->version();
+// });
+
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return '';
 });
 
-$app->get('/{platform}/accept/{company}', function ($platform, $company) {
-    return "{$company} is accepting T&C on the {$platform} platform...";
+$app->get('/aws/accept/{company}', function ($company) {
+    return view('aws-accept', ['company' => $company]);
+});
+
+$app->post('/accept', function (\Illuminate\Http\Request $request)
+{
+    $company = $request->input('company');
+    $platform = $request->input('platform');
+    $stamp = date("D M j G:i:s T Y");
+
+    $subject = "{$platform} terms accepted by {$company}";
+    $message = "{$company} has accepted the documents for {$platform} at {$stamp}";
+
+    Log::info($message);
+
+    $headers = 'From: jguice@compunet.biz' . "\r\n" .
+               'Reply-To: jguice@compunet.biz' . "\r\n" .
+               'X-Mailer: PHP/' . phpversion();
+
+    mail('jguice@compunet.biz', $subject, $message, $headers);
+
+    return view('aws-thanks', ['company' => $company]);
 });
