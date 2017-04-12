@@ -47,7 +47,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1>AWS Terms &amp; Conditions</h1>
-        <p>By checking the box below and clicking <i>Agree</i>, you are indicating that you have read the terms, conditions, and SLA/MSA documents linked below and agree to all  abide by all provisions set forth therein.</p>
+        <p>By checking the box below and clicking <i>Agree</i>, you are indicating that you have read the terms, conditions, and SLA/MSA documents linked below and agree to abide by all provisions set forth therein.</p>
 
 
         <form action="/accept" method="post">
