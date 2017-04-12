@@ -4,4 +4,5 @@ INSTALL_DIR=/opt/bitnami/apps/tc
 
 [[ -d $INSTALL_DIR ]] || mkdir $INSTALL_DIR
 cp -R * $INSTALL_DIR
-(cd $INSTALL_DIR && /opt/bitnami/php/bin/composer install)
+(cd $INSTALL_DIR && HOME=/home/cliqruser /opt/bitnami/php/bin/composer install)
+
