@@ -28,9 +28,10 @@ $app->post('/accept', function (\Illuminate\Http\Request $request)
     $company = $request->input('company');
     $platform = $request->input('platform');
     $stamp = date("D M j G:i:s T Y");
+    $ip = $request->ip();
 
     $subject = "{$platform} terms accepted by {$company}";
-    $message = "{$company} has accepted the documents for {$platform} at {$stamp}";
+    $message = "{$company} has accepted the documents for {$platform} at {$stamp} (via IP {$ip})";
 
     Log::info($message);
 
