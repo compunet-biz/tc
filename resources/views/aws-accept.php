@@ -78,7 +78,7 @@ id='visto'/>-->
         <div class="col-md-6">
           <h2>AWS SLA/MSA</h2>
           <p>This document outlines the SLA and Master Service Agreement</p>
-          <p><a class="btn btn-default" href="https://s3.us-east-2.amazonaws.com/compunetpublicdocs/AWS+MSA+SLA+AVNET+v1.3.pdf" role="button" target="_new">View document &raquo;</a></p>
+          <p><a class="btn btn-default" href="https://s3.us-east-2.amazonaws.com/compunetpublicdocs/CompuNet+MSA.pdf" role="button" target="_new">View document &raquo;</a></p>
        </div>
       </div>
 
